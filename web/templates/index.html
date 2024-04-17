@@ -2,5 +2,16 @@
 
 
 {% block 'contenido' %}
-<h1>Hola como estan "Estamos en el Inicio"</h1> <!-- aquí pones lo que quieras mostrar -->
+<div class="row m-4 container">
+    <h3>Indice</h3>
+    {% for flan in flanes%}
+    <div class="card" style="width: 16rem; margin-top: 1%;">
+        <img src="{{flan.image_url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{flan.name}}</h5>
+        <p class="card-text">{{flan.description}}</p>
+        </div>
+    </div>
+    {% endfor%}
+</div>
 {% endblock %}

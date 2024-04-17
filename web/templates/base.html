@@ -7,7 +7,7 @@
     <title>{% block '' %}Bienvenido a Onlyflans{% endblock %}</title>
 </head>
 <body>
-    <div class="container" style="border: 3px solid; padding-bottom: 2%;"> 
+    <div class="container" style="background-color: #FFC0CB; border: 3px solid; padding-bottom: 2%;"> 
 
     {% block 'navbar' %}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,10 +22,13 @@
                 <a class="nav-link active" aria-current="page" href= {% url "index" %}>Inicio</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href={% url "welcome" %}>Bienvenido</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href={% url "about" %}>Acerca</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href={% url "welcome" %}>Bienvenido</a>
+                <a class="nav-link active" aria-current="page" href={% url "contacto" %}>Contacto</a>
               </li>
             </ul>
           </div>
@@ -33,20 +36,19 @@
       </nav>
     {% endblock %}
 
-
     {% block 'header' %}
     {% load static %}
-    <div style="background: red;"><img src="{% static 'logo.png' %}" width="200" height="100" alt="logo"></div>
-    
-    {% endblock %}
+    <div style="text-align: center;"><img src="{% static 'logo.png' %}" width="200" height="100" alt="logo"></div>    
+    {% endblock 'header'%}
 
+   
     {% block 'contenido' %}
-    <div style="background: white;">Contenido</div>
-    {% endblock %}
+    <div style="background-color: red; ">Contenido</div>
+    {% endblock 'contenido'%}
+
 
     {% block 'footer' %}
-    <div style="background: green; text-align: center;">Creado por la estudiante Marlen Alvarez, Desafio Latam 2024.</div>
-        
+    <div style="background-color:#EA2C62; text-align: center; padding-top: 2rem; color:#ffff; border-radius: 1rem;">Creado por la estudiante Marlen Alvarez, Desafio Latam 2024.</div>        
     {% endblock %}
 </div>
 
