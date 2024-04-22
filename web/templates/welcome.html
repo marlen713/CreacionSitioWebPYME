@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block 'contenido' %}
-<div class="row m-4 container">
-    <h3>Bienvenido: <strong>{{ user.username }}</strong> !! tenemos variedades de sabores para tí...</h3>
+<div class="row m-3 container">
+    <h3 class="titulo p-3">Bienvenido: <strong>{{ user.username }}</strong> !! tenemos variedades de sabores para tí...</h3>
     {% for flan in flanes%}
-    <div class="card" style="width: 16rem; margin-top: 1%;">
-        <img src="{{flan.image_url}}" class="card-img-top" alt="...">
+    <div class="card" style="width: 16rem;">
+        <img src="{{flan.image_url}}"  alt="...">
         <div class="card-body">
-        <h5 class="card-title">{{flan.name}}</h5>
+        <h5 class="card-title" style="color:#210062;">{{flan.name}}</h5>
         <p class="card-text">{{flan.description}}</p>
-        <a href={% url 'flan_detail' flan.id %}  class="btn btn-primary">Comprar</a>
+        <a href={% url 'flan_detail' flan.id %}  class="btn btn-outline-info text-dark fw-bold">Detalle</a>
         </div>
     </div>
     {% endfor%}

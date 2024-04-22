@@ -1,5 +1,92 @@
+
+
+.container-fluid {
+    background-color: rgb(136, 255, 0);
+    border-radius: 0.5rem;
+}
+
+
+
 .navbar-nav a:hover {
-    background-color:  #0090d3;
     transition: 0.5s; 
     border-radius: 1rem;
+	color: black;
+	
 }
+
+.dropdown {
+	list-style: none;
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding:10px 10px;
+    
+	border-radius: 1rem;
+	
+}
+.dropdown li {
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+	
+}
+.dropdown li:hover {
+    background-color: #6FEDD6;
+	border-radius: 0.5rem;
+	
+}
+.hide { 
+	display: none;
+	
+}
+
+ 
+.card {
+    border: 2px solid rgb(136, 255, 0);
+}
+
+
+/* Configuramos estilos CSS para nuestro Whatssap   */
+a{
+    text-decoration: none;
+  }
+  
+#whatsapp {
+	position: fixed;
+	bottom: 20px;
+	right:20px;
+}
+
+svg {  /*Definimos el estilo del boton de whatsapp  */
+	width: 80px;
+	display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
+}
+
+circle {
+  fill: #25d366;
+}
+
+path {
+	fill:  #fff;
+}
+
+#whatsapp a {padding: 20px 0;}
+
+#whatsapp a::before {
+  /*content: es lo que mostramos al colocar el mouse sobre el icono   */
+	content: 'Hola !, Te puedo atenter por whatsapp';
+	display: inline-block;
+	vertical-align: middle;
+	padding: 5px 10px;
+	margin-right: 10px;
+	color: rgba(0, 0, 0, .8);
+	background: white;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
+	transition: .3s ease;
+	opacity: 0;
+}
+#whatsapp:hover a::before {opacity: 1;}

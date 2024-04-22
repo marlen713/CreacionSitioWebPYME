@@ -9,7 +9,7 @@
         <img src="{{ flan.image_url }}" width="300" alt="{{ flan.name }}">
         <p>El flan es un postre de origen francés​ elaborado con una natilla teniendo como ingredientes principales yemas de huevos, un poco de clara a veces, leche entera y azúcar que luego es refrigerado para obtener una textura cremosa y gelatinosa.</p>
         <p>Su origen se remonta a siglos antes de Cristo, y ya era elaborado con huevo como ingrediente principal de la receta, por fenicios, griegos y romanos, que entonces lo llamaban Tyropatina.</p>
-        <a href={% url 'flan_detail' flan.id %}  class="btn btn-primary">Comprar</a>
+        <a href={% url 'flan_detail' flan.id %}  class="btn btn-dark">Comprar</a>
     {%endif%}
 {% endblock %}
 
