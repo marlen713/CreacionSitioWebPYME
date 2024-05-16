@@ -30,7 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == 'True'
 
-ALLOWED_HOSTS = ['*', 'https://creacionsitiowebpyme.onrender.com']
+ALLOWED_HOSTS = ['*', 'https://creacionsitiowebpyme.onrender.com', 'creacionsitiowebpyme.onrender.com']
+#Para levantarlo en github dev CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']
+CSRF_TRUSTED_ORIGINS = ['https://creacionsitiowebpyme.onrender.com']
 
 
 # Application definition
